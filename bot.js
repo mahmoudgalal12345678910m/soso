@@ -42,4 +42,5 @@ https://discord.gg/khYKYCe
 **`) 
 }).catch(console.error)
 })
-client.login('NDkzNTM0NTc2MTExNjQ4NzY4.DrEuVA.6i2H4F53SpWggwN1HrWOqtgfJm0');
+client.login(process.env.BOT_TOKEN);
+
