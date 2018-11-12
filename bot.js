@@ -156,41 +156,6 @@ ${co.first().content}
 
 
 
-client.on('message', async message => {
-   let c = client.guilds.get('458253633037795328').channels.get('511461217811038210');
-   if (!c);
-   if (message.content.startsWith(prefix + 'file')) {
-       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**ضح رابط الملف للتحميل**')).then(co => {
-       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف **')).then(d => {    
-       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
-                 var dd = d.first().content;
-                 if (!dd) return;
-                  var cod = co.first().content;
-                 if (!cod) return;
-                  var own = o.first().content;
-                 if (!own) return;
-                 
-                 
-                   c.send(`
- @everyone | @here 
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes  :arrow_down:
-\`\`\`js
-${co.first().content}
-\`\`\`
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-**
-وصف الكود : ${d.first().content}
-تم النشر بواسطه : ${'<@'+message.author.id+'>'}
-المصدر : ${o.first().content}
-**
-          `)
-       })
-       })
-       })
-   }
-});
-
 
 
 
@@ -249,7 +214,7 @@ client.on('message', async message => {
                  
                    c.send(`
 \`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes  قسم التقديم
+   Malicious™ Codes 
 \`\`\`js
 ${co.first().content}
 \`\`\`
