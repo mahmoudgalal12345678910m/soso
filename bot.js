@@ -43,7 +43,7 @@ client.on('message', async message => {
    if (message.content.startsWith(prefix + 'js')) {
        let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب الكود الان**')).then(co => {
        let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف الكود الان**')).then(d => {    
-	   let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
+       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
                  var dd = d.first().content;
                  if (!dd) return;
                   var cod = co.first().content;
@@ -79,7 +79,7 @@ client.on('message', async message => {
    if (message.content.startsWith(prefix + 'py')) {
        let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب الكود الان**')).then(co => {
        let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف الكود الان**')).then(d => {    
-	   let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
+       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
                  var dd = d.first().content;
                  if (!dd) return;
                   var cod = co.first().content;
@@ -120,7 +120,7 @@ client.on('message', async message => {
    if (message.content.startsWith(prefix + 'pac')) {
        let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب البكج الان**')).then(co => {
        let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف له**')).then(d => {    
-	   let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
+       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
                  var dd = d.first().content;
                  if (!dd) return;
                   var cod = co.first().content;
@@ -162,7 +162,7 @@ client.on('message', async message => {
    if (message.content.startsWith(prefix + 'file')) {
        let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**ضح رابط الملف للتحميل**')).then(co => {
        let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف **')).then(d => {    
-	   let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
+       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
                  var dd = d.first().content;
                  if (!dd) return;
                   var cod = co.first().content;
@@ -203,7 +203,7 @@ client.on('message', async message => {
    if (message.content.startsWith(prefix + 'file')) {
        let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**ضح رابط الملف للتحميل**')).then(co => {
        let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف **')).then(d => {    
-	   let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
+       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
                  var dd = d.first().content;
                  if (!dd) return;
                   var cod = co.first().content;
@@ -238,7 +238,7 @@ client.on('message', async message => {
    if (message.content.startsWith(prefix + 'تقديم')) {
        let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**خبرتك بالديسكورد ؟**')).then(co => {
        let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**الاسم**')).then(d => {    
-	   let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**العمر **')).then(o => {    
+       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**العمر **')).then(o => {    
                  var dd = d.first().content;
                  if (!dd) return;
                   var cod = co.first().content;
