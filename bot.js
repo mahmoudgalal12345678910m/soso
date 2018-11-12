@@ -201,9 +201,9 @@ client.on('message', async message => {
    let c = client.guilds.get('458253633037795328').channels.get('511530336912539648');
    if (!c);
    if (message.content.startsWith(prefix + 'تقديم')) {
-       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**خبرتك بالديسكورد ؟**')).then(co => {
-       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**الاسم**')).then(d => {    
-       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**العمر **')).then(o => {    
+       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**خبرتك ولغتك **')).then(co => {
+       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اسمك**')).then(o => {    
+       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**عمرك**')).then(d => {    
                  var dd = d.first().content;
                  if (!dd) return;
                   var cod = co.first().content;
@@ -213,24 +213,27 @@ client.on('message', async message => {
                  
                  
                    c.send(`
+ @everyone | @here 
 \`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes 
+   Malicious™ Codes  :arrow_down:
+\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
+
 \`\`\`js
+
 ${co.first().content}
+
 \`\`\`
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-**
+
 الاسم : ${d.first().content}
-تم التقديم بواسطه : ${'<@'+message.author.id+'>'}
+تم التقديم بواسطه: ${'<@'+message.author.id+'>'}
 العمر : ${o.first().content}
-**
+          
           `)
        })
        })
        })
    }
 });
-
 
 
              
